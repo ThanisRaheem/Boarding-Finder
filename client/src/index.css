@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-slate-50 text-ink font-body antialiased;
+}
+
+@layer utilities {
+  .glass-header {
+    @apply border-b border-white/40 bg-white/75 shadow-sm shadow-emerald-900/5 backdrop-blur-xl;
+  }
+  .nav-link {
+    @apply relative rounded-full px-4 py-2 text-sm font-semibold text-slate-600 transition-all duration-300;
+  }
+  .nav-link:hover {
+    @apply -translate-y-0.5 bg-gradient-to-r from-emerald-500/15 to-teal-500/15 text-emerald-800 shadow-sm;
+  }
+  .nav-link-active {
+    @apply bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-md shadow-emerald-500/30;
+  }
+  .card-hover {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-900/10;
+  }
+  .gradient-border {
+    @apply relative rounded-2xl bg-gradient-to-br from-emerald-400 via-teal-400 to-cyan-500 p-[1px] shadow-lg shadow-emerald-500/20;
+  }
+  .gradient-border-inner {
+    @apply h-full w-full rounded-2xl bg-white;
+  }
+}
